@@ -2,7 +2,7 @@ include ':app'
 
 // 业务组件
 include ':moviecomponent'
-include ':bookscomponent'
+//include ':bookscomponent'
 
 // 基础组件
 include ':basecore'
