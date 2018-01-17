@@ -1,16 +1,32 @@
 apply plugin: 'com.android.application'
 
+def config = rootProject.ext.config
+def libs = rootProject.ext.libs
+def isModule = isModule.toBoolean()
+
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    compileSdkVersion config.compileSdkVersion
+    buildToolsVersion config.buildToolsVersion
+
     defaultConfig {
         applicationId "com.elson.doraemon"
-        minSdkVersion 17
-        targetSdkVersion 26
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner libs.testInstrumentationRunner
+
+//        jackOptions {
+//            enabled true
+//        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ moduleName : project.getName() ]
+            }
+        }
+
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -21,10 +37,15 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:26.+'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
+
+    if (isModule) {
+        compile project(':basecore')
+    } else {
+        compile project(':moviecomponent')
+//        compile project(':bookscomponent')
+    }
+
+    // XXXProcessor具体的工程中声明，在lib库中声明时，只能作用于lib库
+    annotationProcessor libs.butterknifeProcessor
+    annotationProcessor libs.arouterProcessor
 }

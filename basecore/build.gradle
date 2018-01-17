@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+
+def libs = rootProject.ext.libs
+android {
+    compileSdkVersion config.compileSdkVersion
+    buildToolsVersion config.buildToolsVersion
+
+
+    defaultConfig {
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+
+    }
+
+//    compileOptions {
+//        annotationProcessorOptions {
+//            arguments = [ moduleName : project.getName() ]
+//        }
+//    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile libs.supportAppcompatV7
+    compile libs.constraintLayout
+    testCompile libs.junit
+
+
+    // 替换成最新版本, 需要注意的是api
+    // 要与compiler匹配使用，均使用最新版可以保证兼容
+    compile libs.butterknife
+    compile libs.arouter
+//    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4' //只能在具体组件的gradle文件中声明
+}

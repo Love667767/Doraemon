@@ -1,0 +1,55 @@
+def isModule = isModule.toBoolean()
+if (isModule) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+
+android {
+    compileSdkVersion config.compileSdkVersion
+    buildToolsVersion config.buildToolsVersion
+
+    defaultConfig {
+        if (isModule) {
+            applicationId "com.elson.bookscomponent"
+        }
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        //设置了resourcePrefix值后，所有的资源名必须以指定的字符串做前缀，否则会报错。
+        //但是resourcePrefix这个值只能限定xml里面的资源，并不能限定图片资源，所有图片资源仍然需要手动去修改资源名。
+        // Lint代码时，可以检测出错误，但是仍可以build出Apk
+        resourcePrefix "books_"
+        testInstrumentationRunner libs.testInstrumentationRunner
+    }
+
+    sourceSets {
+        main {
+            if (isModule) {
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                //集成开发模式下排除debug文件夹中的所有Java文件
+                java {
+                    exclude 'debug/**'
+                }
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile project(':basecore')
+    annotationProcessor libs.arouterProcessor
+}
