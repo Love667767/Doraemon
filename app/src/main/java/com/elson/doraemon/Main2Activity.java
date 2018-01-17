@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import com.alibaba.android.arouter.launcher.ARouter;
 import com.elson.basecore.event.EventCenter;
 
 import org.greenrobot.eventbus.EventBus;
@@ -15,7 +14,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity {
+public class Main2Activity extends AppCompatActivity {
 
     @BindView(R.id.textView)
     TextView mTextView;
@@ -32,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.textView)
     public void onViewClicked() {
         mTextView.setText("我被点击了");
-        EventBus.getDefault().postSticky(new EventCenter<String>(0, "我来自App的消息"));
-        ARouter.getInstance().build("/movie/activity").navigation();
-//        Navigator.navigation(this, Main2Activity.class);
+//        EventBus.getDefault().postSticky(new EventCenter<String>(0, "我来自App的消息"));
+//        ARouter.getInstance().build("/movie/activity").navigation();
+
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

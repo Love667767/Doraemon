@@ -12,9 +12,9 @@ android {
         versionCode 1
         versionName "1.0"
 
-
+        multiDexEnabled true
     }
-
+//    只能在具体的组件中配置
 //    compileOptions {
 //        annotationProcessorOptions {
 //            arguments = [ moduleName : project.getName() ]
@@ -37,4 +37,9 @@ dependencies {
     compile libs.butterknife
     compile libs.arouter
 //    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4' //只能在具体组件的gradle文件中声明
+
+    compile libs.eventBus
+    compile libs.googleGson
+    compile libs.rxPermissions
+    compile libs.rxBinding
 }
