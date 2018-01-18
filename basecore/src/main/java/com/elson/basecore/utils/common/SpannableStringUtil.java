@@ -1,4 +1,4 @@
-package com.elson.basecore.utils;
+package com.elson.basecore.utils.common;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -42,9 +42,9 @@ import static android.graphics.BlurMaskFilter.Blur;
  *     desc  : SpannableString相关工具类
  * </pre>
  */
-public class SpannableStringUtils {
+public class SpannableStringUtil {
 
-    private SpannableStringUtils() {
+    private SpannableStringUtil() {
         throw new UnsupportedOperationException("u can't instantiate me...");
     }
 
@@ -377,7 +377,7 @@ public class SpannableStringUtils {
 
         /**
          * 设置点击事件
-         * <p>需添加view.setMovementMethod(LinkMovementMethod.getInstance())</p>
+         * <p>需添加view.setMovementMethod(LinkMovementMethod.getsContext())</p>
          *
          * @param clickSpan 点击事件
          * @return {@link Builder}
@@ -389,7 +389,7 @@ public class SpannableStringUtils {
 
         /**
          * 设置超链接
-         * <p>需添加view.setMovementMethod(LinkMovementMethod.getInstance())</p>
+         * <p>需添加view.setMovementMethod(LinkMovementMethod.getsContext())</p>
          *
          * @param url 超链接
          * @return {@link Builder}

@@ -32,7 +32,7 @@ public class MovieMainActivity extends AppCompatActivity {
         mMovie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                ARouter.getInstance().build("/movie/activity2").navigation();
+//                ARouter.getsContext().build("/movie/activity2").navigation();
                 Navigator.navigation(MovieMainActivity.this, MovieMain2Activity.class);
             }
         });

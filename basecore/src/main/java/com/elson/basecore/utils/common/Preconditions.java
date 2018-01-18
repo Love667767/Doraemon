@@ -1,4 +1,4 @@
-package com.elson.basecore.utils;
+package com.elson.basecore.utils.common;
 
 import android.support.annotation.Nullable;
 

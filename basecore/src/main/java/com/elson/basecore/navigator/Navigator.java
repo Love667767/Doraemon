@@ -69,7 +69,7 @@ public class Navigator {
 
     private static void checkContext(Context context) {
         if (!(context instanceof Activity)) {
-            throw new IllegalArgumentException("context is not instanceof Activity");
+            throw new IllegalArgumentException("sContext is not instanceof Activity");
         }
     }
 

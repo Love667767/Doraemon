@@ -4,6 +4,7 @@ import android.support.annotation.StringRes;
 import android.widget.TextView;
 
 import com.elson.basecore.exception.BizRunException;
+import com.elson.basecore.utils.common.EmptyUtil;
 
 
 /**
@@ -28,7 +29,7 @@ public class ComLogicUtil {
      */
     public static String getViewContent(TextView view, String msg) throws BizRunException {
         String content = getViewContent(view);
-        if (GenericUtil.isEmpty(content)) {
+        if (EmptyUtil.isEmpty(content)) {
             throw new BizRunException(msg);
         }
         return content;
@@ -62,7 +63,7 @@ public class ComLogicUtil {
     //***************************************** 校验数据 **************************************************
 
     public static String checkString(String str, String msg) throws BizRunException {
-        if (str == null || GenericUtil.isEmpty(str.trim())) {
+        if (str == null || EmptyUtil.isEmpty(str.trim())) {
             throw new BizRunException(msg);
         }
         return str;

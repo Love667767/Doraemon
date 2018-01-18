@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.elson.basecore.event.EventCenter;
 
 import org.greenrobot.eventbus.EventBus;
@@ -19,6 +20,9 @@ public class MovieMain2Activity extends AppCompatActivity {
         setContentView(R.layout.movie_activity_main);
         TextView  tv = (TextView) findViewById(R.id.tv_movie);
         tv.setText("我是MovieMain2Activity");
+        tv.setOnClickListener(v -> {
+            ARouter.getInstance().build("/host/activity2").navigation();
+        });
     }
 
 

@@ -4,6 +4,7 @@ if (isModule) {
 } else {
     apply plugin: 'com.android.library'
 }
+apply plugin: 'me.tatarka.retrolambda'
 
 def config = rootProject.ext.config
 def libs = rootProject.ext.libs
@@ -30,10 +31,20 @@ android {
 
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [ moduleName : project.getName() ]
+                arguments = [moduleName: project.getName()]
             }
         }
     }
+
+    compileOptions {
+        sourceCompatibility config.sourceCompatibility
+        targetCompatibility config.targetCompatibility
+        encoding 'UTF-8'
+    }
+
+//    retrolambda {
+//        javaVersion JavaVersion.VERSION_1_7
+//    }
 
     sourceSets {
         main {

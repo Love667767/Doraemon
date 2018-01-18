@@ -1,5 +1,7 @@
 package com.elson.basecore.utils;
 
+import com.elson.basecore.utils.common.EmptyUtil;
+
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -43,7 +45,7 @@ public class BigDecimalUtil {
      * @return
      */
     private static BigDecimal yuan(String cent) {
-        if (GenericUtil.isEmpty(cent)) {
+        if (EmptyUtil.isEmpty(cent)) {
             cent = "0";
         }
         BigDecimal decimal = new BigDecimal(cent);
@@ -61,7 +63,7 @@ public class BigDecimalUtil {
      * @return： 分
      */
     public static final long unitary2Cent(String num) {
-        if (GenericUtil.isEmpty(num)) {
+        if (EmptyUtil.isEmpty(num)) {
             return 0;
         }
         return new BigDecimal(num)
@@ -89,7 +91,7 @@ public class BigDecimalUtil {
     }
 
     public static String format(String num) {
-        String temp = GenericUtil.checkNotNull(num, "0");
+        String temp = StringUtil.checkNotNull(num, "0");
         return format(new BigDecimal(temp).doubleValue());
     }
 
@@ -110,7 +112,7 @@ public class BigDecimalUtil {
     }
 
     public static String formatCash(String num) {
-        String temp = GenericUtil.checkNotNull(num, "0");
+        String temp = StringUtil.checkNotNull(num, "0");
         return formatCash(new BigDecimal(temp).doubleValue());
     }
 
@@ -119,7 +121,7 @@ public class BigDecimalUtil {
     }
 
     public static BigDecimal createBigDecimal(String num) {
-        String temp = GenericUtil.checkNotNull(num, "0");
+        String temp = StringUtil.checkNotNull(num, "0");
         return new BigDecimal(temp);
     }
 
@@ -158,7 +160,7 @@ public class BigDecimalUtil {
 
     // **********************************2位小数********************************************
     public static String format2TwoPoint(String str){
-        if (GenericUtil.isEmpty(str) || !isNumber(str)) {
+        if (EmptyUtil.isEmpty(str) || !isNumber(str)) {
             str = "0";
         }
         BigDecimal decimal = new BigDecimal(str);

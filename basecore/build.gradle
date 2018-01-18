@@ -1,10 +1,11 @@
 apply plugin: 'com.android.library'
+apply plugin: 'me.tatarka.retrolambda'
 
 def libs = rootProject.ext.libs
+def config = rootProject.ext.config
 android {
     compileSdkVersion config.compileSdkVersion
     buildToolsVersion config.buildToolsVersion
-
 
     defaultConfig {
         minSdkVersion config.minSdkVersion
@@ -14,12 +15,17 @@ android {
 
         multiDexEnabled true
     }
-//    只能在具体的组件中配置
-//    compileOptions {
-//        annotationProcessorOptions {
+
+    // 配合retrolambda使用，哪个module使用retrolambda，都需要配置
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+        encoding 'UTF-8'
+
+//        annotationProcessorOptions {//    只能在具体的组件中配置
 //            arguments = [ moduleName : project.getName() ]
 //        }
-//    }
+    }
 }
 
 dependencies {
@@ -27,9 +33,12 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    testCompile libs.junit
+
+    compile libs.supportDesign
     compile libs.supportAppcompatV7
     compile libs.constraintLayout
-    testCompile libs.junit
+    compile libs.recyclerView
 
 
     // 替换成最新版本, 需要注意的是api
@@ -42,4 +51,14 @@ dependencies {
     compile libs.googleGson
     compile libs.rxPermissions
     compile libs.rxBinding
+
+    // =========这四个属于一个套件，可配合使用 start===========
+    // 下拉刷新
+    compile libs.EasyRefreshLayout
+    // Item侧滑，类似QQ删除功能
+    compile libs.EasySwipeMenuLayout
+    // 粘性粘性标签库
+    compile libs.PinnedSectionItemDecoration
+    compile libs.BaseRecyclerViewAdapterHelper
+    // =========这四个属于一个套件，可配合使用 end===========
 }
