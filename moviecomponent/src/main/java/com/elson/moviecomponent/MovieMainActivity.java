@@ -1,42 +1,37 @@
 package com.elson.moviecomponent;
 
-import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+import android.support.annotation.NonNull;
 import android.util.Log;
-import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.elson.basecore.base.BaseActivity;
+import com.elson.basecore.base.BasePresenter;
 import com.elson.basecore.event.EventCenter;
-import com.elson.basecore.navigator.Navigator;
 
-import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
+import butterknife.BindView;
+import butterknife.OnClick;
+
 @Route(path = "/movie/activity")
-public class MovieMainActivity extends AppCompatActivity {
+public class MovieMainActivity extends BaseActivity {
 
-    private final String TAG = this.getClass().getSimpleName();
 
-    private TextView mMovie;
+    @BindView(R2.id.tv_movie)
+    TextView mMovie;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.movie_activity_main);
-        EventBus.getDefault().register(this);
-        mMovie = (TextView) findViewById(R.id.tv_movie);
-        mMovie.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                ARouter.getsContext().build("/movie/activity2").navigation();
-                Navigator.navigation(MovieMainActivity.this, MovieMain2Activity.class);
-            }
-        });
-        Log.d(TAG, "onCreated");
+    protected int getLayoutID() {
+        return R.layout.movie_activity_main;
+    }
+
+    @Override
+    protected void initViews() {
+
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
@@ -54,9 +49,14 @@ public class MovieMainActivity extends AppCompatActivity {
     }
 
 
+    @NonNull
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        EventBus.getDefault().unregister(this);
+    public BasePresenter initPresenter() {
+        return null;
+    }
+
+
+    @OnClick(R2.id.tv_movie)
+    public void onViewClicked() {
     }
 }

@@ -18,8 +18,8 @@ android {
 
     // 配合retrolambda使用，哪个module使用retrolambda，都需要配置
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility config.sourceCompatibility
+        targetCompatibility config.targetCompatibility
         encoding 'UTF-8'
 
 //        annotationProcessorOptions {//    只能在具体的组件中配置
@@ -37,28 +37,13 @@ dependencies {
 
     compile libs.supportDesign
     compile libs.supportAppcompatV7
-    compile libs.constraintLayout
     compile libs.recyclerView
-
-
-    // 替换成最新版本, 需要注意的是api
-    // 要与compiler匹配使用，均使用最新版可以保证兼容
-    compile libs.butterknife
-    compile libs.arouter
-//    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4' //只能在具体组件的gradle文件中声明
+    compile libs.constraintLayout
 
     compile libs.eventBus
     compile libs.googleGson
     compile libs.rxPermissions
     compile libs.rxBinding
 
-    // =========这四个属于一个套件，可配合使用 start===========
-    // 下拉刷新
-    compile libs.EasyRefreshLayout
-    // Item侧滑，类似QQ删除功能
-    compile libs.EasySwipeMenuLayout
-    // 粘性粘性标签库
-    compile libs.PinnedSectionItemDecoration
-    compile libs.BaseRecyclerViewAdapterHelper
-    // =========这四个属于一个套件，可配合使用 end===========
+    compile libs.butterknife
 }

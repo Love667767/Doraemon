@@ -1,8 +1,11 @@
-include ':app'
+include ':app', ':commonbundle'
 
 // 业务组件
 include ':moviecomponent'
 //include ':bookscomponent'
 
-// 基础组件
+// 基础组件(所有)
+include ':commonbundle'
+
+// framework
 include ':basecore'

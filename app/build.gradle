@@ -39,6 +39,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    repositories {
+        flatDir {
+            dirs 'libs' //this way we can find the .aar file in libs folder
+        }
+    }
 }
 
 dependencies {
@@ -49,7 +55,11 @@ dependencies {
     } else {
         compile project(':moviecomponent')
 //        compile project(':bookscomponent')
+//        compile project(':commonbundle')
+//        compile (name:'moviecomponent-release', ext: 'aar')
     }
+
+
 
     // XXXProcessor具体的工程中声明，在lib库中声明时，只能作用于lib库
     annotationProcessor libs.butterknifeProcessor

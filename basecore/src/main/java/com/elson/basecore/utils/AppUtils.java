@@ -11,8 +11,6 @@ import android.os.Environment;
 import android.os.Handler;
 import android.telephony.TelephonyManager;
 import android.util.Log;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
 
 import com.elson.basecore.BaseApp;
 
@@ -91,25 +89,6 @@ public class AppUtils {
         TelephonyManager tm = (TelephonyManager) context.getSystemService(Context
                 .TELEPHONY_SERVICE);
         return tm.getDeviceId();
-    }
-
-    /**
-     * 显示软键盘
-     */
-    public static void openSoftInput(EditText et) {
-        InputMethodManager inputMethodManager = (InputMethodManager) et.getContext()
-                .getSystemService(Context.INPUT_METHOD_SERVICE);
-        inputMethodManager.showSoftInput(et, InputMethodManager.HIDE_NOT_ALWAYS);
-    }
-
-    /**
-     * 隐藏软键盘
-     */
-    public static void hideSoftInput(EditText et) {
-        InputMethodManager inputMethodManager = (InputMethodManager) et.getContext()
-                .getSystemService(Context.INPUT_METHOD_SERVICE);
-        inputMethodManager.hideSoftInputFromWindow(et.getWindowToken(), InputMethodManager
-                .HIDE_NOT_ALWAYS);
     }
 
     /**
