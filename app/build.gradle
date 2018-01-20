@@ -45,15 +45,44 @@ android {
             dirs 'libs' //this way we can find the .aar file in libs folder
         }
     }
+
+    // 所有渠道包
+    productFlavors {
+
+        host {
+            applicationId = "com.elson.doraemon"
+
+//            buildConfigField 'String', 'BUGLY_KEY', '"8b824f08e5"'
+            manifestPlaceholders = [
+                    APP_NAME    : "Doraemon",
+            ]
+        }
+
+        movie {
+            applicationId = "com.elson.moviebundle"
+        }
+
+        books {
+            applicationId = "com.elson.moviebundle"
+        }
+
+
+    }
+
+
+
+
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     if (isModule) {
-        compile project(':basecore')
+        compile project(':commonbundle')
     } else {
-        compile project(':moviecomponent')
+        compile project(':mainbundle')
+//        compile project(':moviecomponent')
+
 //        compile project(':bookscomponent')
 //        compile project(':commonbundle')
 //        compile (name:'moviecomponent-release', ext: 'aar')

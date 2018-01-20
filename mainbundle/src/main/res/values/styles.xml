@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <!-- 主题：启动页 -->
+    <style name="main_SplashFullScreen" parent="@style/FullScreen">
+        <item name="android:windowBackground">@drawable/shape_spalsh</item>
+    </style>
+
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- =====================通用的颜色值 ================= -->
+    <!-- App风格样式的颜色 -->
+    <color name="color_kx_app">#4989ed</color>
+
+    <!-- 字体颜色 -->
+    <color name="color_000000">#000000</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_ff0000">#ff0000</color>
+    <color name="color_ffffff">#ffffff</color>
+
+    <!-- 分隔线 -->
+    <color name="color_divider_line">#dedede</color>
+    <color name="color_f9f9f9">#f9f9f9</color>
+    <color name="color_f2f2f2">#f2f2f2</color>
+    <color name="color_dedede">#dedede</color>
+    <color name="color_b7b7b7">#b7b7b7</color>
+    <color name="color_dbdbdb">#dbdbdb</color>
+    <!-- ========================通用的颜色值 =============== -->
+
+</resources>

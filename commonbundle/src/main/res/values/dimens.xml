@@ -1,0 +1,34 @@
+<resources>
+
+
+    <!-- 字体样式大小 -->
+    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_15">15sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_13">13sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_11">11sp</dimen>
+    <!-- 字体样式大小 -->
+
+    <!-- 间距 -->
+    <dimen name="dimens_5">5dp</dimen>
+    <dimen name="dimens_6">6dp</dimen>
+    <dimen name="dimens_7">7dp</dimen>
+    <dimen name="dimens_9">9dp</dimen>
+    <dimen name="dimens_10">10dp</dimen>
+    <dimen name="dimens_11">11dp</dimen>
+    <dimen name="dimens_12">12dp</dimen>
+    <dimen name="dimens_13">13dp</dimen>
+    <dimen name="dimens_14">14dp</dimen>
+    <dimen name="dimens_15">15dp</dimen>
+    <dimen name="dimens_16">16dp</dimen>
+    <dimen name="dimens_18">18dp</dimen>
+    <dimen name="dimens_20">20dp</dimen>
+    <dimen name="shape_radius">4dp</dimen>
+    <!-- 间距 -->
+
+
+</resources>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ============ common  start ============== -->
+    <!-- 字体样式-->
+    <style name="text_size_18_color_33">
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:textColor">@color/color_333333</item>
+    </style>
+
+    <style name="text_size_18_color_66">
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:textColor">@color/color_666666</item>
+    </style>
+
+    <style name="text_size_16_color_00">
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@color/color_000000</item>
+    </style>
+
+    <style name="text_size_16_color_33">
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@color/color_333333</item>
+    </style>
+
+    <style name="text_size_16_color_66">
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@color/color_666666</item>
+    </style>
+
+    <style name="text_size_16_color_99">
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@color/color_999999</item>
+    </style>
+
+    <style name="text_size_15_color_33">
+        <item name="android:textSize">@dimen/text_size_15</item>
+        <item name="android:textColor">@color/color_333333</item>
+    </style>
+
+    <style name="text_size_14_color_ff">
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@color/color_ffffff</item>
+    </style>
+
+    <style name="text_size_14_color_33">
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@color/color_333333</item>
+    </style>
+
+    <style name="text_size_14_color_66">
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@color/color_666666</item>
+    </style>
+
+    <style name="text_size_14_color_99">
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@color/color_999999</item>
+    </style>
+
+    <style name="text_size_13_color_33">
+        <item name="android:textSize">@dimen/text_size_13</item>
+        <item name="android:textColor">@color/color_333333</item>
+    </style>
+
+    <style name="text_size_13_color_66">
+        <item name="android:textSize">@dimen/text_size_13</item>
+        <item name="android:textColor">@color/color_666666</item>
+    </style>
+
+    <style name="text_size_13_color_99">
+        <item name="android:textSize">@dimen/text_size_13</item>
+        <item name="android:textColor">@color/color_999999</item>
+    </style>
+
+    <style name="text_size_12_color_33">
+        <item name="android:textSize">@dimen/text_size_12</item>
+        <item name="android:textColor">@color/color_333333</item>
+    </style>
+
+    <style name="text_size_12_color_66">
+        <item name="android:textSize">@dimen/text_size_12</item>
+        <item name="android:textColor">@color/color_666666</item>
+    </style>
+
+    <style name="text_size_12_color_99">
+        <item name="android:textSize">@dimen/text_size_12</item>
+        <item name="android:textColor">@color/color_999999</item>
+    </style>
+
+    <style name="text_size_11_color_ff">
+        <item name="android:textSize">@dimen/text_size_11</item>
+        <item name="android:textColor">@color/color_ffffff</item>
+    </style>
+
+    <style name="text_size_11_color_33">
+        <item name="android:textSize">@dimen/text_size_11</item>
+        <item name="android:textColor">@color/color_333333</item>
+    </style>
+
+    <style name="text_size_11_color_66">
+        <item name="android:textSize">@dimen/text_size_11</item>
+        <item name="android:textColor">@color/color_666666</item>
+    </style>
+
+    <style name="text_size_11_color_99">
+        <item name="android:textSize">@dimen/text_size_11</item>
+        <item name="android:textColor">@color/color_999999</item>
+    </style>
+
+
+
+    <!-- 水平分隔线 -->
+    <style name="common_horizontal_divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/color_divider_line</item>
+    </style>
+
+    <!-- 竖直分隔线 -->
+    <style name="common_vertical_divider">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">1px</item>
+        <item name="android:background">@color/color_divider_line</item>
+    </style>
+
+    <style name="margin12_horizontal_divider" parent="common_horizontal_divider">
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+    </style>
+
+    <!---->
+    <style name="style_margin12">
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+    </style>
+
+    <style name="common_edt_style">
+        <item name="android:cursorVisible">true</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:textColor">@color/color_333333</item>
+        <item name="android:textColorHint">@color/color_999999</item>
+    </style>
+    <!--  ===========common  end================ -->
+</resources>

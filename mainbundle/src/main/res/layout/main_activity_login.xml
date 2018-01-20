@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_ffffff"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/edt_phone"
+        style="@style/common_edt_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimens_12"
+        android:layout_marginRight="@dimen/dimens_12"
+        android:layout_marginTop="30dp"
+        android:background="@null"
+        android:drawableLeft="@drawable/login_phone"
+        android:drawablePadding="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/main_login_hint_phone"
+        android:inputType="phone"
+        android:paddingBottom="5dp"
+        android:paddingTop="10dp"
+        android:textSize="@dimen/text_size_13"/>
+
+    <View style="@style/margin12_horizontal_divider"/>
+
+    <LinearLayout
+        style="@style/style_margin12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edt_identify_code"
+            style="@style/common_edt_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableLeft="@drawable/login_identify_code"
+            android:drawablePadding="10dp"
+            android:focusable="true"
+            android:hint="@string/register_edt_hint"
+            android:inputType="numberPassword"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
+            android:textSize="@dimen/text_size_13"/>
+
+        <TextView
+            android:id="@+id/tv_wait_time"
+            style="@style/text_size_11_color_ff"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_textview_bg"
+            android:enabled="true"
+            android:gravity="center"
+            android:lines="1"
+            android:padding="10dp"
+            android:text="@string/register_identify_code"
+            android:textColor="@color/color_ffffff"/>
+    </LinearLayout>
+
+    <View
+        style="@style/margin12_horizontal_divider"
+        android:layout_marginTop="3dp"/>
+
+
+
+    <TextView
+        android:id="@+id/tv_login"
+        style="@style/style_margin12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/selector_textview_bg"
+        android:enabled="false"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/main_login_btn"
+        android:textColor="@color/color_ffffff"/>
+
+
+</LinearLayout>

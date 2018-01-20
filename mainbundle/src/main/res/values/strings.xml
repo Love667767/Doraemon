@@ -1,0 +1,18 @@
+<resources>
+    <string name="main_app_name">MainBundle</string>
+
+
+    <string name="main_login_phone_not_empty">手机号不能为空</string>
+    <string name="main_login_identifycode_sending">验证码已发送</string>
+    <string name="main_login_phone_or_code_not_empty">手机号或验证码不能为空</string>
+    <string name="main_login_rule">登录即同意《小卡配送用户协议》</string>
+    <string name="main_login_hint_rule">是否同意《服务标准及违约规定》</string>
+    <string name="main_login_btn">登录</string>
+    <string name="main_login_hint_phone">请输入手机号</string>
+    <string name="main_login_title">注册登录</string>
+
+    <string name="register_title">输入验证码</string>
+    <string name="register_phone_desc">验证码已发送至%s</string>
+    <string name="register_edt_hint">请输入验证码</string>
+    <string name="register_identify_code">获取验证码</string>
+</resources>

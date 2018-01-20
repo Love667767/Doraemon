@@ -1,7 +1,8 @@
-include ':app', ':commonbundle'
+include ':app'
 
 // 业务组件
-include ':moviecomponent'
+include ':mainbundle'
+//include ':moviecomponent'
 //include ':bookscomponent'
 
 // 基础组件(所有)

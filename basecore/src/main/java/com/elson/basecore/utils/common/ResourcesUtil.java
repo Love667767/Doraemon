@@ -2,6 +2,9 @@ package com.elson.basecore.utils.common;
 
 import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.ColorInt;
+import android.support.annotation.ColorRes;
+import android.support.annotation.DrawableRes;
 import android.view.View;
 
 import com.elson.basecore.utils.AppUtils;
@@ -39,7 +42,7 @@ public class ResourcesUtil {
      * @param id 资源文件id
      * @return 资源文件对应图片
      */
-    public static Drawable getDrawable(int id) {
+    public static Drawable getDrawable(@DrawableRes int id) {
         return AppUtils.getContext().getResources().getDrawable(id);
     }
 
@@ -49,7 +52,8 @@ public class ResourcesUtil {
      * @param id 资源文件id
      * @return 资源文件对应颜色值
      */
-    public static int getColor(int id) {
+    @ColorInt
+    public static int getColor(@ColorRes int id) {
         return AppUtils.getContext().getResources().getColor(id);
     }
 
