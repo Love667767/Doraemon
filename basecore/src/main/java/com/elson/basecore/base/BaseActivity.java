@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.elson.basecore.utils.common.ActivityUtil;
 import com.elson.basecore.utils.common.StatusBarUtil;
+import com.elson.basecore.utils.common.ToastUtil;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -128,7 +129,7 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
 
     @Override
     public void showToast(String msg) {
-//        ToastUtils.showShortToast(getApplicationContext(), msg);
+        ToastUtil.showShortToast(getApplicationContext(), msg);
     }
 
 }

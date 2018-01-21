@@ -1,6 +1,7 @@
 package com.elson.mainbundle.login;
 
 import android.support.annotation.NonNull;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 
 import com.elson.basecore.base.BaseActivity;
 import com.elson.basecore.base.BasePresenter;
+import com.elson.basecore.event.EventCenter;
 import com.elson.basecore.navigator.Navigator;
 import com.elson.basecore.utils.AppUtils;
 import com.elson.basecore.utils.ComLogicUtil;
@@ -19,6 +21,9 @@ import com.elson.basecore.utils.common.ToastUtil;
 import com.elson.mainbundle.MainActivity;
 import com.elson.mainbundle.R;
 import com.elson.mainbundle.R2;
+
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -34,6 +39,8 @@ import rx.android.schedulers.AndroidSchedulers;
 
 public class LoginActivity extends BaseActivity {
 
+    @BindView(R2.id.toolBar)
+    Toolbar mToolbar;
     @BindView(R2.id.edt_phone)
     EditText mEdtPhone;
     @BindView(R2.id.edt_identify_code)
@@ -60,9 +67,7 @@ public class LoginActivity extends BaseActivity {
     protected void initViews() {
         getWindow().setBackgroundDrawable(null);
 
-        initTitleBar(null, "注册登录");
-//        KeyBoardUtil.hide(mCustomToolbar);
-        Navigator.navigation(this, MainActivity.class);
+        initTitleBar(mToolbar, "注册登录");
 
     }
 
@@ -71,17 +76,21 @@ public class LoginActivity extends BaseActivity {
         return true;
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onReceiveEvent(EventCenter event) {
+
+    }
+
+
     @OnClick({R2.id.tv_wait_time, R2.id.tv_login})
     public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R2.id.tv_wait_time://获取验证码
-                getIdentifyCode();
-                break;
+        int viewId = view.getId();
+        if (viewId == R.id.tv_wait_time) {
+            getIdentifyCode();
 
-            case R2.id.tv_login:
-                KeyboardUtil.hideSoftInput(this);
-                Navigator.navigationThenKill(this, MainActivity.class);
-                break;
+        } else if (viewId == R.id.tv_login) {
+            KeyboardUtil.hideSoftInput(this);
+            Navigator.navigationThenKill(this, MainActivity.class);
         }
     }
 

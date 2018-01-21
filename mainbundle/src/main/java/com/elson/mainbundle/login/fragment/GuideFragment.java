@@ -4,24 +4,20 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.view.WindowManager;
 import android.widget.ImageView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.elson.basecore.base.BaseFragment;
 import com.elson.basecore.base.BasePresenter;
-import com.elson.basecore.navigator.Navigator;
-import com.elson.basecore.utils.AppUtils;
-import com.elson.basecore.utils.SPUtil;
 import com.elson.mainbundle.R;
 import com.elson.mainbundle.R2;
-import com.elson.mainbundle.login.LoginActivity;
 
 import butterknife.BindView;
 
 /**
  * Created by elson on 2017/4/28
  */
-
+@Route(path = "/main/guide")
 public class GuideFragment extends BaseFragment {
 
     private static final String INDEX = "index";
@@ -49,15 +45,7 @@ public class GuideFragment extends BaseFragment {
         return fragment;
     }
 
-    public void goLogin() {
-        // 移除全屏
-        getActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
 
-        Navigator.navigation(mContext, LoginActivity.class);
-        getActivity().finish();
-        SPUtil.putAndApply(AppUtils.getContext(), "isFirstLogin", false);
-    }
 
     @NonNull
     @Override
@@ -83,11 +71,5 @@ public class GuideFragment extends BaseFragment {
                 mGuideIv.setBackgroundColor(Color.parseColor("#0000ff"));
                 break;
         }
-
-        mGuideIv.setOnClickListener(v -> {
-            if (mIndex == 2) {
-                goLogin();
-            }
-        });
     }
 }

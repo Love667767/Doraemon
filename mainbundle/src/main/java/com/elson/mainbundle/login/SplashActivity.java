@@ -21,7 +21,7 @@ import com.tbruyelle.rxpermissions.RxPermissions;
 
 public class SplashActivity extends BaseActivity {
 
-    private static final String IS_FIRST_LOGIN = "isFirstLogin";
+    public static final String IS_FIRST_LOGIN = "isFirstLogin";
 
     @Override
     protected int getLayoutID() {
@@ -36,6 +36,12 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     protected void initViews() {
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         String[] permissions = {
                 Manifest.permission.ACCESS_FINE_LOCATION, //定位
                 Manifest.permission.WRITE_EXTERNAL_STORAGE,//外部存储卡
@@ -49,10 +55,7 @@ public class SplashActivity extends BaseActivity {
                     RxUtil.timer(2)
                             .subscribe(o -> initFirstLogin());
                 });
-
-
     }
-
 
     private void initFirstLogin() {
         boolean isFirstLogin = (boolean) SPUtil.get(this, IS_FIRST_LOGIN, true);
