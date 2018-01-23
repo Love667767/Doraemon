@@ -33,6 +33,7 @@ public class MovieMain2Activity extends BaseActivity {
         mMovie.setOnClickListener(v -> {
 
             ARouter.getInstance()
+
                     .build("/main/activity/main")
                     .navigation(this);
 
