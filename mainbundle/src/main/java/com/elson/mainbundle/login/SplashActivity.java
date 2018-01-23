@@ -64,7 +64,7 @@ public class SplashActivity extends BaseActivity {
         } else {
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN,
                     WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
-            Navigator.navigation(this, MainActivity.class);
+            Navigator.navigationThenKill(this, MainActivity.class);
         }
     }
 

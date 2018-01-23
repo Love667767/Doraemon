@@ -24,15 +24,18 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".login.GuideActivity"
+        <activity
+            android:name=".login.GuideActivity"
             android:screenOrientation="portrait"/>
 
-        <activity android:name=".login.LoginActivity"
+        <activity
+            android:name=".login.LoginActivity"
             android:screenOrientation="portrait"/>
 
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
-
 
 
     </application>

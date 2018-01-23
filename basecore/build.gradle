@@ -46,4 +46,8 @@ dependencies {
     compile libs.rxBinding
 
     compile libs.butterknife
+
+    compile libs.okGo
+    compile libs.okRx
+    compile libs.okServer
 }

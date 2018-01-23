@@ -1,16 +1,20 @@
 package com.elson.mainbundle;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.elson.basecore.base.BaseActivity;
 import com.elson.basecore.base.BasePresenter;
 
+import butterknife.OnClick;
+
 /**
  * Created by apple on 2018/1/19.
  */
-
+@Route(path = "/main/activity/main")
 public class MainActivity extends BaseActivity {
 
     @NonNull
@@ -35,5 +39,15 @@ public class MainActivity extends BaseActivity {
                 .add(R.id.container, fragment)
                 .commitAllowingStateLoss();
 
+    }
+
+    @Override
+    public Intent getIntent() {
+        return super.getIntent();
+    }
+
+    @OnClick(R2.id.textView)
+    public void onViewClicked() {
+        ARouter.getInstance().build("/movie/activity").navigation();
     }
 }

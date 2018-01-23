@@ -31,7 +31,12 @@ public class MovieMain2Activity extends BaseActivity {
     protected void initViews() {
         mMovie.setText("我是MovieMain2Activity");
         mMovie.setOnClickListener(v -> {
-            ARouter.getInstance().build("/host/activity2").navigation();
+
+            ARouter.getInstance()
+                    .build("/main/activity/main")
+                    .navigation(this);
+
+
         });
     }
 

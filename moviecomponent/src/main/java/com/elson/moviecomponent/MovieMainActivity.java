@@ -10,6 +10,7 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.elson.basecore.base.BaseActivity;
 import com.elson.basecore.base.BasePresenter;
 import com.elson.basecore.event.EventCenter;
+import com.elson.basecore.navigator.Navigator;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
@@ -58,5 +59,6 @@ public class MovieMainActivity extends BaseActivity {
 
     @OnClick(R2.id.tv_movie)
     public void onViewClicked() {
+        Navigator.navigation(this, MovieMain2Activity.class);
     }
 }

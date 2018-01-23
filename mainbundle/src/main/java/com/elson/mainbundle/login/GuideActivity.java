@@ -9,6 +9,8 @@ import android.widget.TextView;
 import com.elson.basecore.base.BaseActivity;
 import com.elson.basecore.base.BasePresenter;
 import com.elson.basecore.navigator.Navigator;
+import com.elson.basecore.utils.AppUtils;
+import com.elson.basecore.utils.SPUtil;
 import com.elson.mainbundle.R;
 import com.elson.mainbundle.R2;
 import com.elson.mainbundle.login.fragment.GuideFragment;
@@ -75,6 +77,6 @@ public class GuideActivity extends BaseActivity {
                 WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
 
         Navigator.navigationThenKill(this, LoginActivity.class);
-//        SPUtil.putAndApply(AppUtils.getContext(), SplashActivity.IS_FIRST_LOGIN, false);
+        SPUtil.putAndApply(AppUtils.getContext(), SplashActivity.IS_FIRST_LOGIN, false);
     }
 }

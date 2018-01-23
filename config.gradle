@@ -1,13 +1,13 @@
 project.ext {
 
     config = [
-            minSdkVersion    : 15,
-            compileSdkVersion: 25,
-            targetSdkVersion : 23,
-            sdkVersion       : '25.1.0',
-            buildToolsVersion: "25.0.1",
-            sourceCompatibility       : JavaVersion.VERSION_1_8,
-            targetCompatibility       : JavaVersion.VERSION_1_8,
+            minSdkVersion      : 15,
+            compileSdkVersion  : 25,
+            targetSdkVersion   : 23,
+            sdkVersion         : '25.1.0',
+            buildToolsVersion  : "25.0.1",
+            sourceCompatibility: JavaVersion.VERSION_1_8,
+            targetCompatibility: JavaVersion.VERSION_1_8,
     ]
 
     libs = [
@@ -39,6 +39,11 @@ project.ext {
             retrofit                     : "com.squareup.retrofit2:retrofit:2.0.0",
             retrofitConverterGson        : "com.squareup.retrofit2:converter-gson:2.0.0",
             adapterRxJava                : "com.squareup.retrofit2:adapter-rxjava:2.0.0",
+
+            okGo                         : 'com.lzy.net:okgo:3.0.4',
+            okRx                         : 'com.lzy.net:okrx:1.0.2',
+            okRx2                        : 'com.lzy.net:okrx2:2.0.2',
+            okServer                     : 'com.lzy.net:okserver:2.0.5',
 
             butterknife                  : 'com.jakewharton:butterknife:8.8.1',
             butterknifeProcessor         : 'com.jakewharton:butterknife-compiler:8.8.1',
