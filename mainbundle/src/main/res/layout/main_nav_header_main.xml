@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/dimens_16"
+             android:background="?attr/colorPrimary"
+             android:gravity="bottom"
+             android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <!--<com.zyw.horrarndoo.sdk.widgets.MovingImageView-->
+        <!--android:id="@+id/miv_menu"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="250dp"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--android:src="@mipmap/menu_header_background"-->
+        <!--app:miv_load_on_create="false"-->
+        <!--app:miv_max_relative_size="3.0"-->
+        <!--app:miv_min_relative_offset="0.2"-->
+        <!--app:miv_repetitions="-1"-->
+        <!--app:miv_speed="100"-->
+        <!--app:miv_start_delay="100"/>-->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_head"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="@dimen/dimens_16"
+        android:layout_marginTop="30dp"
+        android:paddingTop="@dimen/dimens_16"
+        android:src="@drawable/icon_doraemon"
+        app:civ_border_color="@color/color_ffffff"
+        app:civ_border_width="2dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/dimens_10"
+        android:paddingLeft="@dimen/dimens_5"
+        android:paddingTop="@dimen/dimens_5"
+        android:text="Learn and live."
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+</FrameLayout>

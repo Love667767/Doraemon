@@ -2,15 +2,15 @@
 
 
     <!-- 字体样式大小 -->
-    <dimen name="text_size_22">22sp</dimen>
-    <dimen name="text_size_20">20sp</dimen>
-    <dimen name="text_size_18">18sp</dimen>
-    <dimen name="text_size_16">16sp</dimen>
-    <dimen name="text_size_15">15sp</dimen>
-    <dimen name="text_size_14">14sp</dimen>
-    <dimen name="text_size_13">13sp</dimen>
-    <dimen name="text_size_12">12sp</dimen>
-    <dimen name="text_size_11">11sp</dimen>
+    <dimen name="text_size_22">22dp</dimen>
+    <dimen name="text_size_20">20dp</dimen>
+    <dimen name="text_size_18">18dp</dimen>
+    <dimen name="text_size_16">16dp</dimen>
+    <dimen name="text_size_15">15dp</dimen>
+    <dimen name="text_size_14">14dp</dimen>
+    <dimen name="text_size_13">13dp</dimen>
+    <dimen name="text_size_12">12dp</dimen>
+    <dimen name="text_size_11">11dp</dimen>
     <!-- 字体样式大小 -->
 
     <!-- 间距 -->

@@ -81,7 +81,9 @@ dependencies {
         compile project(':commonbundle')
     } else {
         compile project(':mainbundle')
-        compile project(':moviecomponent')
+        compile project(':jokebundle')
+        compile project(':kitbundle')
+//        compile project(':moviecomponent')
 
 //        compile project(':bookscomponent')
 //        compile project(':commonbundle')

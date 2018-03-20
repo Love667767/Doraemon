@@ -2,6 +2,7 @@
 apply from: "config.gradle"
 
 buildscript {
+    ext.kotlin_version = '1.2.21'
     repositories {
         jcenter()
         mavenCentral()
@@ -12,6 +13,7 @@ buildscript {
         classpath 'me.tatarka:gradle-retrolambda:3.6.1'//retrolambda表达式
         classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'//Lib库使用butterknife,最新的8.8.1无法编译出R2
 
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" //Kotlin
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -20,7 +22,9 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
-        maven { url "https://jitpack.io" }
+        maven {
+            url "https://jitpack.io"
+        }
     }
 }
 

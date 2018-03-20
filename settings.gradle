@@ -2,7 +2,9 @@ include ':app'
 
 // 业务组件
 include ':mainbundle'
-include ':moviecomponent'
+include ':jokebundle'
+include ':kitbundle'
+//include ':moviecomponent'
 //include ':bookscomponent'
 
 // 基础组件(所有)

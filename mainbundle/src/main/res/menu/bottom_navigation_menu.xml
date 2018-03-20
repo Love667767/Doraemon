@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_item_movie"
+        android:icon="@drawable/ic_vector_bottom_movie"
+        android:title="电影" />
+
+
+    <item
+        android:id="@+id/menu_item_book"
+        android:icon="@drawable/ic_vector_bottom_gankio"
+        android:title="图书" />
+
+    <item
+        android:id="@+id/menu_item_joke"
+        android:icon="@drawable/ic_vector_bottom_book"
+        android:title="段子" />
+
+    <item
+        android:id="@+id/menu_item_mine"
+        android:icon="@drawable/ic_vector_bottom_personal"
+        android:title="我的" />
+
+</menu>
