@@ -47,4 +47,6 @@ dependencies {
     compile libs.butterknife
     annotationProcessor libs.butterknifeProcessor
     annotationProcessor libs.arouterProcessor
+
+    compile 'de.hdodenhof:circleimageview:2.2.0'
 }

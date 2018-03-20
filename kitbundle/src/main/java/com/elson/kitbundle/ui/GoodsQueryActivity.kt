@@ -40,7 +40,6 @@ class GoodsQueryActivity : AppCompatActivity(), AnkoLogger {
             this.adapter = mAdapter
         }
 
-        edtPostId.setText("3353306343466")
 
 
         tvSearch.setOnClickListener {
